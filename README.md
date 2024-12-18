@@ -28,19 +28,8 @@ for tup in combinations(count(), 2):
     print(tup)  # Outputs: (0,1) (0,2) (1,2) (0,3) (1,3) (2,3)
 ```
 
-## Features
-
-- Generates combinations in colexicographic order with respect to input iterable (vs. lexicographic order from itertools)
-- Can handle infinite input iterables
-- Same interface as itertools functions for easy replacement
-
 ## When to Use
 
-- When working with infinite iterables (lexicographic order would never finish generating combinations that start with the first element)
 - When colexicographic order is more natural for your use case (as in sometimes the case in combinatorics)
-
-## Features
-
-- Generates combinations in colexicographic order with respect to input iterable (vs. lexicographic order from itertools)
-- Can handle infinite input iterables
-- Same interface as itertools functions for easy replacement
+- When working with infinite iterables (lexicographic order would never finish generating combinations that start with the first element, and itertools tries to create all elements from iterable in memory)
+- Interface is identical to itertools versions for smooth transition
